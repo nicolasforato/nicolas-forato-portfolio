@@ -256,4 +256,15 @@ footer {
     .perfil h1 {
         font-size: 2.2rem; 
     }
+
+    /* Correção do alinhamento para o texto não ficar com buracos no celular */
+    p {
+        text-align: left !important;
+    }
+
+    /* Ajuste de margem nas listas para não ficarem coladas no canto */
+    ul {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
 }
