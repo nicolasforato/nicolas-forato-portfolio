@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Nicolas Forato</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><button id="btn-tema" class="btn-tema">🌙 Escuro</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre" class="apresentacao">
+            <div class="perfil">
+                <img src="nicolas-forato.jpeg" alt="Foto de Nicolas Forato" class="foto-perfil">
+                <h1>Nicolas Forato</h1>
+                <h2>Estudante de Análise e Desenvolvimento de Sistemas</h2>
+            </div>
+            <div class="biografia">
+                <h3>Sobre mim</h3>
+                <p>Olá! Sou estudante de Análise e Desenvolvimento de Sistemas e atuo na área de operações logísticas. Iniciei a graduação focado em obter uma formação superior sólida e em compreender como a tecnologia pode ser aplicada para otimizar processos, resolver problemas e gerar eficiência no setor corporativo e no desenvolvimento de softwares.</p>
+                <p>Busco alinhar a minha experiência prática com os conhecimentos técnicos do curso, estando aberto a novas oportunidades e desafios no ecossistema de tecnologia. No tempo livre, sou entusiasta de esportes e jogos de videogame, além de acompanhar novidades sobre hardware e inovações tecnológicas.</p>
+            </div>
+        </section>
+
+        <section id="formacao">
+            <h2>Formação</h2>
+            <ul>
+                <li><strong>Análise e Desenvolvimento de Sistemas</strong> - UNINTER (Cursando)</li>
+                <li><strong>Inglês Aplicado à Tecnologia</strong> - Estudo Autônomo (Em andamento)</li>
+                <li><strong>Excel Básico e Avançado</strong> - Cursa (Concluído)</li>
+            </ul>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfólio</h2>
+            
+            <article>
+                <h3>1. Portfólio Online Pessoal</h3>
+                <p><strong>Status:</strong> Em desenvolvimento (Projeto Acadêmico)</p>
+                <p>Desenvolvimento de uma página web responsiva para apresentação profissional. O projeto foca na aplicação prática de HTML5 estrutural, estilização customizada com CSS3 (sem frameworks) e interatividade com JavaScript para validação de formulários e modo noturno.</p>
+                <a href="https://github.com/nicolasforato/nicolas-forato-portfolio" target="_blank">Acessar repositório no GitHub</a>
+            </article>
+
+            <article>
+                <h3>2. Engenharia de Requisitos - Sistema BergasWorks</h3>
+                <p><strong>Status:</strong> Concluído (Projeto Acadêmico)</p>
+                <p>Mapeamento de processos e levantamento de requisitos funcionais e não-funcionais para um sistema focado em automação de acesso e segurança corporativa. Desenvolvimento de diagramas de caso de uso em UML para especificação do sistema.</p>
+                <a href="engenharia-requisitos.pdf" target="_blank">Ver documentação (PDF)</a>
+            </article>
+
+            <article>
+                <h3>3. Sistema de Gestão Comercial (Atividade Extensionista)</h3>
+                <p><strong>Status:</strong> Em planejamento</p>
+                <p>Desenvolvimento de um modelo de sistema voltado para microempresas do setor de estética e beleza. O foco do projeto é resolver dores reais de gerenciamento, englobando módulos de precificação de serviços, controle financeiro básico e fluxo de agendamento de clientes.</p>
+                <a href="atividade-extensionista.pdf" target="_blank">Ver planejamento (PDF)</a>
+            </article>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <div id="mensagem-status"></div>
+            
+            <form id="form-contato" action="https://formspree.io/f/maqzrdky" method="POST" novalidate>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div> 
+                <div>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                </div>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Trabalho de Fundamentos da Programação Web.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

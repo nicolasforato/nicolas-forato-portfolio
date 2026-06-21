@@ -1,0 +1,259 @@
+/* Cores principais do site (variáveis globais) */
+:root {
+    --cor-fundo: #f4f7f6;
+    --cor-texto: #333333;
+    --cor-primaria: #2c3e50;
+    --cor-destaque: #3498db;
+    --cor-branca: #ffffff;
+}
+
+/* Reset básico e configurações de transição pra não ter mudança brusca no tema escuro */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Configurações do Header fixo */
+header {
+    background-color: var(--cor-primaria);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Classe dinâmica pro JavaScript destacar onde o usuário está lendo */
+nav ul li a.ativo {
+    color: var(--cor-destaque);
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: 5px;
+}
+
+/* Estrutura central da página */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Caixas de conteúdo (cartões) */
+section {
+    background-color: var(--cor-branca);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+/* Estilos específicos do Perfil e Foto */
+.apresentacao {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--cor-destaque);
+}
+
+.perfil h1 {
+    font-size: 2.8rem;
+    color: var(--cor-primaria);
+    margin-bottom: 5px;
+}
+
+.perfil h2 {
+    font-size: 1.2rem;
+    color: var(--cor-destaque);
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+/* Artigos dentro da área de Portfólio */
+article {
+    background-color: var(--cor-fundo);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--cor-destaque);
+    border-radius: 4px;
+}
+
+/* Estilos para os links dentro do Portfólio */
+article a {
+    color: var(--cor-destaque);
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* Layout do Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--cor-destaque);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ==========================================
+   Configurações do Tema Escuro
+   ========================================== */
+body.tema-escuro {
+    --cor-fundo: #121212;
+    --cor-texto: #e0e0e0;
+    --cor-primaria: #0a0a0a; 
+    --cor-branca: #1e1e1e;   
+}
+
+body.tema-escuro h1, body.tema-escuro h2, body.tema-escuro h3 {
+    color: #81a1c1;
+}
+
+body.tema-escuro article {
+    background-color: #2a2a2a;
+}
+
+body.tema-escuro input, body.tema-escuro textarea {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+/* Proteção pra fonte do menu não sumir no fundo preto */
+body.tema-escuro nav ul li a {
+    color: #ffffff !important;
+}
+
+/* Mantém alto contraste no link que estiver ativo no momento */
+body.tema-escuro nav ul li a.ativo {
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffffff !important;
+}
+
+/* Botão Tema (ajuste específico pro modo escuro) */
+body.tema-escuro .btn-tema {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+/* Correção para o rodapé ficar visível no modo escuro */
+body.tema-escuro footer {
+    color: #ffffff;
+}
+
+/* Botão Tema (estilo padrão) */
+.btn-tema {
+    background-color: transparent;
+    border: 1px solid var(--cor-branca);
+    color: var(--cor-branca);
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+}
+
+/* ==========================================
+   Responsividade (Ajustes para Celular)
+   ========================================== */
+@media (max-width: 600px) {
+    nav ul {
+        gap: 12px; 
+        flex-wrap: wrap; 
+        padding: 0 10px; 
+    }
+    
+    nav ul li a {
+        font-size: 0.95rem; 
+    }
+
+    .btn-tema {
+        font-size: 0.85rem; 
+        padding: 4px 10px;
+    }
+    
+    .perfil h1 {
+        font-size: 2.2rem; 
+    }
+}
